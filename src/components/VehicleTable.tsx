@@ -1,4 +1,4 @@
-import { useMemo, useState } from "react"
+import { useEffect, useMemo, useState } from "react"
 import type { Vehicle, VehicleStatus } from "../types/vehicle"
 
 type VehicleTableProps = {
@@ -104,6 +104,8 @@ type SortableColumnHeaderProps = {
   align?: "left" | "right"
 }
 
+const PAGE_SIZE_OPTIONS = [20, 25, 50, 100] as const
+
 const SortableColumnHeader = ({
   sortKey,
   activeSort,
@@ -158,11 +160,57 @@ export const VehicleTable = ({ vehicles }: VehicleTableProps) => {
     key: "vehicle_id",
     direction: "asc",
   })
+  const [rowsPerPage, setRowsPerPage] = useState<(typeof PAGE_SIZE_OPTIONS)[number]>(
+    25,
+  )
+  const [currentPage, setCurrentPage] = useState(1)
 
   const sortedVehicles = useMemo(
     () => (vehicles.length === 0 ? vehicles : sortVehicles(vehicles, sort)),
     [vehicles, sort],
   )
+  const totalRows = sortedVehicles.length
+  const totalPages = Math.max(1, Math.ceil(totalRows / rowsPerPage))
+  const pageStartIndex = (currentPage - 1) * rowsPerPage
+  const pageEndIndex = pageStartIndex + rowsPerPage
+  const paginatedVehicles = sortedVehicles.slice(pageStartIndex, pageEndIndex)
+  const showingFrom = totalRows === 0 ? 0 : pageStartIndex + 1
+  const showingTo = Math.min(pageEndIndex, totalRows)
+
+  useEffect(() => {
+    setCurrentPage(1)
+  }, [vehicles, rowsPerPage])
+
+  useEffect(() => {
+    if (currentPage <= totalPages) {
+      return
+    }
+    setCurrentPage(totalPages)
+  }, [currentPage, totalPages])
+
+  const handleRowsPerPageChange = (
+    event: React.ChangeEvent<HTMLSelectElement>,
+  ) => {
+    const nextPageSize = Number(event.target.value)
+    if (!PAGE_SIZE_OPTIONS.includes(nextPageSize as (typeof PAGE_SIZE_OPTIONS)[number])) {
+      return
+    }
+    setRowsPerPage(nextPageSize as (typeof PAGE_SIZE_OPTIONS)[number])
+  }
+
+  const handlePreviousPage = () => {
+    if (currentPage === 1) {
+      return
+    }
+    setCurrentPage((previous) => previous - 1)
+  }
+
+  const handleNextPage = () => {
+    if (currentPage >= totalPages) {
+      return
+    }
+    setCurrentPage((previous) => previous + 1)
+  }
 
   return (
     <section
@@ -177,7 +225,7 @@ export const VehicleTable = ({ vehicles }: VehicleTableProps) => {
           Vehicles
         </h2>
         <p className="text-sm text-slate-500" aria-live="polite">
-          Showing {vehicles.length}{" "}
+          Showing {showingFrom}-{showingTo} of {totalRows}{" "}
           {vehicles.length === 1 ? "vehicle" : "vehicles"}
           . Column headers sort the list.
         </p>
@@ -185,6 +233,49 @@ export const VehicleTable = ({ vehicles }: VehicleTableProps) => {
       <p className="mt-1 text-xs text-slate-500">
         Tip: click any column header to sort, then click again to reverse the order.
       </p>
+      <div className="mt-4 flex flex-wrap items-center justify-between gap-3">
+        <label
+          htmlFor="rows-per-page"
+          className="flex items-center gap-2 text-sm text-slate-600"
+        >
+          Rows per page
+          <select
+            id="rows-per-page"
+            value={rowsPerPage}
+            onChange={handleRowsPerPageChange}
+            className="rounded-md border border-slate-300 bg-white px-2 py-1 text-sm text-slate-800 shadow-sm focus:outline-none focus:ring-2 focus:ring-sky-500/40"
+          >
+            {PAGE_SIZE_OPTIONS.map((option) => (
+              <option key={option} value={option}>
+                {option}
+              </option>
+            ))}
+          </select>
+        </label>
+        <div className="flex items-center gap-2 text-sm text-slate-600">
+          <button
+            type="button"
+            onClick={handlePreviousPage}
+            disabled={currentPage === 1}
+            className="rounded-md border border-slate-300 bg-white px-3 py-1.5 text-sm font-medium text-slate-700 shadow-sm hover:bg-slate-100 disabled:cursor-not-allowed disabled:opacity-50"
+            aria-label="Go to previous page"
+          >
+            Previous
+          </button>
+          <span aria-live="polite">
+            Page {currentPage} of {totalPages}
+          </span>
+          <button
+            type="button"
+            onClick={handleNextPage}
+            disabled={currentPage >= totalPages}
+            className="rounded-md border border-slate-300 bg-white px-3 py-1.5 text-sm font-medium text-slate-700 shadow-sm hover:bg-slate-100 disabled:cursor-not-allowed disabled:opacity-50"
+            aria-label="Go to next page"
+          >
+            Next
+          </button>
+        </div>
+      </div>
 
       <div className="mt-4 overflow-x-auto">
         <table className="min-w-full divide-y divide-slate-200 text-left text-sm">
@@ -245,7 +336,7 @@ export const VehicleTable = ({ vehicles }: VehicleTableProps) => {
                 </td>
               </tr>
             ) : (
-              sortedVehicles.map((vehicle) => (
+              paginatedVehicles.map((vehicle) => (
                 <tr key={vehicle.vehicle_id} className="hover:bg-slate-50/80">
                   <td className="whitespace-nowrap px-3 py-3 font-mono text-xs text-slate-600">
                     {vehicle.vehicle_id}
