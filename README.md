@@ -2,6 +2,11 @@
 
 A small web dashboard for a fictional rental fleet. It loads vehicle rows from a CSV file, shows summary counts, multi-criteria filters, a bar chart, plain language insights for the current filter set, and a sortable vehicle table.
 
+
+## Live Website
+If you dont want to setup the project, you can also view it LIVE on this website:
+https://fleet-dashboard-teal.vercel.app/
+
 ## Run locally
 
 ```bash
@@ -15,6 +20,7 @@ Open the URL Vite prints (usually `http://localhost:5173`). To create a producti
 npm run build
 npm run preview
 ```
+
 
 ## What is included
 
