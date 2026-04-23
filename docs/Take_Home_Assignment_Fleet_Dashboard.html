@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Take-Home Assignment — Junior IT Developer & Systems Specialist</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+  :root {
+    --navy: #1a2744;
+    --blue: #2c5282;
+    --light-blue: #e8f0fe;
+    --green: #276749;
+    --green-bg: #f0fdf4;
+    --grey: #64748b;
+    --light-grey: #f8fafc;
+    --border: #e2e8f0;
+    --text: #1e293b;
+    --text-light: #475569;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    color: var(--text);
+    line-height: 1.7;
+    background: #f1f5f9;
+    padding: 40px 20px;
+  }
+
+  .container {
+    max-width: 780px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.08), 0 4px 16px rgba(0,0,0,0.04);
+    overflow: hidden;
+  }
+
+  .header {
+    background: var(--navy);
+    color: white;
+    padding: 36px 44px;
+  }
+
+  .header h1 { font-size: 20px; font-weight: 600; margin-bottom: 4px; }
+  .header .subtitle { font-size: 14px; font-weight: 300; opacity: 0.8; }
+
+  .content { padding: 36px 44px 44px; }
+
+  h2 {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--navy);
+    margin-top: 32px;
+    margin-bottom: 10px;
+    padding-bottom: 6px;
+    border-bottom: 2px solid var(--light-blue);
+  }
+
+  h2:first-child { margin-top: 0; }
+
+  p {
+    font-size: 14px;
+    color: var(--text-light);
+    margin-bottom: 10px;
+  }
+
+  ol, ul {
+    padding-left: 22px;
+    margin-bottom: 14px;
+  }
+
+  li {
+    font-size: 14px;
+    color: var(--text-light);
+    margin-bottom: 6px;
+  }
+
+  li strong { color: var(--text); font-weight: 500; }
+
+  code {
+    font-family: 'SF Mono', 'Consolas', 'Monaco', monospace;
+    font-size: 13px;
+    background: var(--light-grey);
+    border: 1px solid var(--border);
+    padding: 1px 6px;
+    border-radius: 4px;
+  }
+
+  .intro-box {
+    background: var(--green-bg);
+    border: 1px solid #bbf7d0;
+    border-radius: 8px;
+    padding: 18px 22px;
+    margin-bottom: 20px;
+  }
+
+  .intro-box p { margin-bottom: 4px; }
+
+  .highlight {
+    background: var(--light-grey);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 18px 22px;
+    margin-bottom: 16px;
+  }
+
+  .highlight p { margin-bottom: 4px; }
+
+  .footer {
+    padding: 18px 44px;
+    background: var(--light-grey);
+    border-top: 1px solid var(--border);
+    font-size: 12px;
+    color: var(--grey);
+    text-align: center;
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <div class="header">
+    <h1>Take-Home Assignment</h1>
+    <div class="subtitle">Junior IT Developer & Systems Specialist — United Rental Group</div>
+  </div>
+
+  <div class="content">
+
+    <div class="intro-box">
+      <p><strong>Time guidance:</strong> This task should take approximately 1–2 hours. Please don't spend longer than that — we'd rather see a working prototype with clear thinking than a polished product.</p>
+      <p><strong>Deadline:</strong> Please return your submission within 5 working days of receiving this brief.</p>
+    </div>
+
+    <h2>The Scenario</h2>
+    <p>A fictional vehicle rental company operates a fleet of vehicles across multiple branches. They currently have no visibility into their stock — the data sits in a spreadsheet and nobody can quickly answer basic questions like "how many vehicles are available right now?" or "which branch has the most vehicles in maintenance?"</p>
+    <p>Your job is to build a simple web-based dashboard that turns this data into something useful.</p>
+
+    <h2>What You're Given</h2>
+    <p>Attached to this brief is a CSV file (<code>fleet_sample_data.csv</code>) containing approximately 100 rows of sample fleet data with the following columns:</p>
+    <ul>
+      <li><code>vehicle_id</code> — unique identifier</li>
+      <li><code>make</code> — manufacturer (e.g. Ford, Vauxhall, Toyota)</li>
+      <li><code>model</code> — vehicle model</li>
+      <li><code>year</code> — year of registration</li>
+      <li><code>fuel_type</code> — petrol, diesel, electric, or hybrid</li>
+      <li><code>mileage</code> — current odometer reading</li>
+      <li><code>branch</code> — which branch the vehicle is assigned to</li>
+      <li><code>status</code> — one of: <code>available</code>, <code>on_rent</code>, or <code>maintenance</code></li>
+      <li><code>daily_rate</code> — rental rate in £ per day</li>
+      <li><code>last_service_date</code> — date of most recent service</li>
+    </ul>
+
+    <h2>Your Task</h2>
+    <ol>
+      <li><strong>Build a simple web dashboard</strong> that displays the fleet data in a useful way.
+        <ul>
+          <li>Use whatever technology you're comfortable with — React, Vue, plain HTML/JavaScript, Python with Flask, or anything else. Your choice.</li>
+          <li>It doesn't need to be beautiful. It needs to be functional and usable.</li>
+        </ul>
+      </li>
+      <li><strong>Include at least the following:</strong>
+        <ul>
+          <li>A summary view showing: total vehicles, how many are available / on rent / in maintenance, and a breakdown by branch</li>
+          <li>A way to filter or search the data (e.g. by branch, status, fuel type, or similar)</li>
+          <li>One simple visualisation — a chart or graph of your choice (e.g. vehicles by status, mileage distribution, branch comparison)</li>
+        </ul>
+      </li>
+      <li><strong>Use an AI coding assistant</strong> to help you build it.
+        <ul>
+          <li>You can use Claude, ChatGPT, GitHub Copilot, or any similar tool — your choice</li>
+          <li><strong>This is not optional.</strong> We specifically want to see how you work with AI tools. It's a core part of the role.</li>
+        </ul>
+      </li>
+      <li><strong>Write a short README</strong> (maximum 1 page) covering three things:
+        <ul>
+          <li>What you built and why you made the technical choices you did</li>
+          <li>How you used the AI assistant — what it helped with, what didn't work, and what you had to fix or do yourself</li>
+          <li>What you'd improve or add if you had more time</li>
+        </ul>
+      </li>
+    </ol>
+
+    <h2>What to Submit</h2>
+    <div class="highlight">
+      <p><strong>Option A:</strong> A link to a GitHub repository containing your code, the README, and instructions on how to run it.</p>
+      <p><strong>Option B:</strong> A zip file containing all of the above, emailed back to us.</p>
+    </div>
+
+    <h2>What We're Looking For</h2>
+    <p>There is no single right answer. We're interested in how you think and how you work. Specifically:</p>
+    <ul>
+      <li><strong>Does it work?</strong> Can we follow your instructions and see a functioning dashboard?</li>
+      <li><strong>Is your code readable?</strong> Clean structure, sensible naming, no unnecessary complexity.</li>
+      <li><strong>How did you use AI?</strong> The README section on this matters. We value honesty — tell us what the AI did well and where you had to step in.</li>
+      <li><strong>Can you communicate clearly?</strong> Is the README well-written and easy to follow?</li>
+      <li><strong>Did you make smart trade-offs?</strong> With limited time, what did you prioritise and what did you leave out? Good judgement matters more than feature count.</li>
+    </ul>
+
+    <p>If you have any questions about the brief, please don't hesitate to ask. Good luck — we're looking forward to seeing what you build.</p>
+
+  </div>
+
+  <div class="footer">
+    United Rental Group Ltd &nbsp;|&nbsp; Recruitment — Confidential
+  </div>
+
+</div>
+</body>
+</html>

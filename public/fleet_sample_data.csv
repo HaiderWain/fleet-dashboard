@@ -1,0 +1,101 @@
+vehicle_id,make,model,year,fuel_type,mileage,branch,status,daily_rate,last_service_date
+V001,Ford,Transit,2023,diesel,18420,Manchester,on_rent,65.00,2025-11-15
+V002,Vauxhall,Corsa,2024,petrol,8230,Manchester,available,32.00,2026-01-20
+V003,Toyota,Yaris,2023,hybrid,14560,Birmingham,on_rent,35.00,2025-10-08
+V004,Ford,Focus,2022,petrol,31200,Leeds,maintenance,38.00,2025-08-12
+V005,Volkswagen,Transporter,2023,diesel,22340,Manchester,on_rent,72.00,2025-12-01
+V006,Nissan,Leaf,2024,electric,6120,Birmingham,available,40.00,2026-02-14
+V007,Ford,Fiesta,2022,petrol,28900,Sheffield,on_rent,30.00,2025-09-22
+V008,Mercedes-Benz,Sprinter,2023,diesel,19870,Leeds,on_rent,85.00,2025-11-30
+V009,BMW,3 Series,2024,hybrid,5430,Sheffield,available,55.00,2026-03-01
+V010,Vauxhall,Vivaro,2022,diesel,35600,Nottingham,maintenance,58.00,2025-07-18
+V011,Toyota,Corolla,2023,hybrid,12340,Manchester,available,37.00,2025-12-20
+V012,Ford,Transit Custom,2024,diesel,7890,Birmingham,on_rent,68.00,2026-01-15
+V013,Kia,Niro,2024,electric,4560,Leeds,available,42.00,2026-02-28
+V014,Volkswagen,Golf,2023,petrol,16780,Sheffield,on_rent,36.00,2025-10-14
+V015,Ford,Ranger,2022,diesel,38200,Nottingham,on_rent,75.00,2025-08-25
+V016,Nissan,Qashqai,2023,petrol,13450,Manchester,maintenance,39.00,2025-11-05
+V017,Peugeot,Partner,2024,diesel,6230,Birmingham,available,52.00,2026-03-10
+V018,Toyota,Hilux,2023,diesel,21560,Leeds,on_rent,70.00,2025-09-18
+V019,Vauxhall,Astra,2024,petrol,3890,Sheffield,available,34.00,2026-02-05
+V020,Ford,E-Transit,2024,electric,5670,Nottingham,on_rent,62.00,2026-01-22
+V021,Mercedes-Benz,Vito,2023,diesel,17890,Manchester,on_rent,66.00,2025-10-30
+V022,BMW,iX1,2024,electric,4120,Birmingham,available,50.00,2026-03-15
+V023,Volkswagen,Caddy,2022,diesel,29340,Leeds,maintenance,48.00,2025-06-20
+V024,Toyota,Proace,2023,diesel,15670,Sheffield,on_rent,60.00,2025-11-12
+V025,Ford,Puma,2024,hybrid,6890,Nottingham,available,36.00,2026-02-18
+V026,Nissan,Juke,2023,petrol,11230,Manchester,available,33.00,2025-12-08
+V027,Kia,EV6,2024,electric,3450,Birmingham,on_rent,58.00,2026-03-05
+V028,Vauxhall,Combo,2022,diesel,33210,Leeds,on_rent,50.00,2025-08-30
+V029,Peugeot,3008,2023,hybrid,14890,Sheffield,available,44.00,2025-10-22
+V030,Ford,Transit Connect,2024,diesel,5120,Nottingham,on_rent,54.00,2026-01-28
+V031,Toyota,RAV4,2023,hybrid,16230,Manchester,on_rent,48.00,2025-09-15
+V032,Mercedes-Benz,eVito,2024,electric,4890,Birmingham,maintenance,70.00,2026-02-10
+V033,Volkswagen,ID.3,2024,electric,3670,Leeds,available,42.00,2026-03-12
+V034,Ford,Galaxy,2022,diesel,27560,Sheffield,on_rent,56.00,2025-07-25
+V035,Nissan,NV200,2023,diesel,18940,Nottingham,maintenance,46.00,2025-10-02
+V036,Vauxhall,Mokka,2024,electric,5230,Manchester,available,38.00,2026-02-22
+V037,BMW,X1,2023,petrol,12670,Birmingham,on_rent,52.00,2025-11-20
+V038,Kia,Sportage,2023,hybrid,15340,Leeds,on_rent,45.00,2025-09-28
+V039,Toyota,Yaris Cross,2024,hybrid,4560,Sheffield,available,37.00,2026-03-08
+V040,Ford,Tourneo Custom,2023,diesel,20120,Nottingham,on_rent,72.00,2025-10-18
+V041,Peugeot,e-208,2024,electric,3890,Manchester,available,35.00,2026-03-01
+V042,Volkswagen,Tiguan,2023,petrol,17450,Birmingham,on_rent,46.00,2025-08-15
+V043,Mercedes-Benz,A-Class,2024,petrol,5670,Leeds,available,48.00,2026-02-25
+V044,Vauxhall,Grandland,2023,hybrid,13890,Sheffield,maintenance,42.00,2025-11-08
+V045,Ford,Kuga,2024,hybrid,6340,Nottingham,on_rent,44.00,2026-01-10
+V046,Nissan,Townstar,2023,diesel,16780,Manchester,on_rent,56.00,2025-09-05
+V047,Toyota,C-HR,2024,hybrid,4230,Birmingham,available,40.00,2026-03-18
+V048,BMW,2 Series,2023,petrol,14560,Leeds,on_rent,50.00,2025-10-25
+V049,Kia,Ceed,2022,petrol,26780,Sheffield,on_rent,32.00,2025-07-12
+V050,Ford,Transit,2024,diesel,7890,Nottingham,available,65.00,2026-02-08
+V051,Volkswagen,Crafter,2023,diesel,23450,Manchester,on_rent,82.00,2025-11-02
+V052,Peugeot,Rifter,2023,diesel,12340,Birmingham,maintenance,44.00,2025-09-20
+V053,Vauxhall,Corsa-e,2024,electric,4560,Leeds,available,34.00,2026-03-14
+V054,Toyota,Land Cruiser,2022,diesel,31890,Sheffield,on_rent,78.00,2025-06-28
+V055,Nissan,Ariya,2024,electric,3230,Nottingham,available,52.00,2026-02-20
+V056,Ford,Fiesta Van,2022,diesel,29670,Manchester,maintenance,28.00,2025-08-08
+V057,Mercedes-Benz,GLA,2024,hybrid,5890,Birmingham,on_rent,54.00,2026-01-18
+V058,BMW,iX3,2023,electric,9870,Leeds,on_rent,56.00,2025-12-05
+V059,Kia,Picanto,2024,petrol,2890,Sheffield,available,26.00,2026-03-20
+V060,Vauxhall,Vivaro-e,2024,electric,4120,Nottingham,on_rent,62.00,2026-02-02
+V061,Ford,Focus Estate,2023,diesel,15230,Manchester,available,40.00,2025-10-12
+V062,Toyota,Aygo X,2024,petrol,3450,Birmingham,available,28.00,2026-03-06
+V063,Volkswagen,T-Roc,2023,petrol,14890,Leeds,on_rent,42.00,2025-09-08
+V064,Peugeot,e-Expert,2024,electric,5670,Sheffield,maintenance,64.00,2026-01-25
+V065,Nissan,Micra,2022,petrol,24560,Nottingham,on_rent,29.00,2025-07-30
+V066,Ford,Mustang Mach-E,2024,electric,4230,Manchester,on_rent,58.00,2026-02-15
+V067,Mercedes-Benz,Citan,2023,diesel,16340,Birmingham,on_rent,52.00,2025-11-22
+V068,BMW,1 Series,2024,petrol,5120,Leeds,available,44.00,2026-03-02
+V069,Vauxhall,Crossland,2023,petrol,13670,Sheffield,on_rent,36.00,2025-10-06
+V070,Toyota,Proace City,2024,diesel,6890,Nottingham,available,48.00,2026-02-12
+V071,Kia,e-Niro,2023,electric,11230,Manchester,maintenance,44.00,2025-12-18
+V072,Ford,Transit,2022,diesel,36780,Birmingham,on_rent,62.00,2025-05-20
+V073,Volkswagen,Polo,2024,petrol,3890,Leeds,available,30.00,2026-03-16
+V074,Peugeot,308,2023,hybrid,12560,Sheffield,on_rent,38.00,2025-09-12
+V075,Nissan,X-Trail,2024,hybrid,5670,Nottingham,on_rent,46.00,2026-01-30
+V076,Vauxhall,Astra Sports Tourer,2023,diesel,16890,Manchester,on_rent,42.00,2025-10-28
+V077,Ford,Explorer,2024,hybrid,4560,Birmingham,available,52.00,2026-03-10
+V078,Toyota,GR Yaris,2023,petrol,8920,Leeds,maintenance,40.00,2025-11-15
+V079,Mercedes-Benz,EQA,2024,electric,3450,Sheffield,available,54.00,2026-02-26
+V080,BMW,X3,2023,diesel,17230,Nottingham,on_rent,58.00,2025-08-22
+V081,Kia,Stonic,2024,petrol,4120,Manchester,available,32.00,2026-03-04
+V082,Volkswagen,ID.4,2024,electric,5890,Birmingham,on_rent,50.00,2026-01-12
+V083,Ford,Tourneo Connect,2023,diesel,14560,Leeds,on_rent,56.00,2025-10-20
+V084,Peugeot,2008,2024,electric,3670,Sheffield,available,36.00,2026-03-22
+V085,Vauxhall,Combo-e,2024,electric,4890,Nottingham,maintenance,52.00,2026-02-06
+V086,Toyota,Corolla Touring Sports,2023,hybrid,13450,Manchester,on_rent,40.00,2025-09-25
+V087,Nissan,Primastar,2022,diesel,28340,Birmingham,on_rent,60.00,2025-07-08
+V088,Ford,Transit Custom,2023,diesel,19560,Leeds,maintenance,66.00,2025-08-18
+V089,Mercedes-Benz,B-Class,2024,petrol,5230,Sheffield,on_rent,46.00,2026-01-08
+V090,BMW,4 Series,2023,diesel,15670,Nottingham,available,54.00,2025-12-12
+V091,Kia,ProCeed,2023,petrol,11890,Manchester,on_rent,38.00,2025-10-15
+V092,Volkswagen,Amarok,2024,diesel,6780,Birmingham,available,76.00,2026-03-08
+V093,Ford,S-Max,2022,diesel,32450,Leeds,on_rent,48.00,2025-06-15
+V094,Toyota,Camry,2024,hybrid,4120,Sheffield,available,44.00,2026-02-28
+V095,Vauxhall,Insignia,2022,diesel,34560,Nottingham,on_rent,40.00,2025-05-30
+V096,Peugeot,5008,2023,hybrid,13780,Manchester,available,46.00,2025-11-28
+V097,Nissan,Navara,2023,diesel,17890,Birmingham,maintenance,68.00,2025-09-02
+V098,Ford,EcoSport,2022,petrol,25670,Leeds,on_rent,34.00,2025-07-22
+V099,Mercedes-Benz,Sprinter,2024,diesel,6340,Sheffield,on_rent,88.00,2026-02-18
+V100,BMW,i4,2024,electric,3890,Nottingham,available,56.00,2026-03-25
